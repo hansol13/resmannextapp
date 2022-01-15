@@ -1,6 +1,9 @@
-import Head from 'next/head'
+import Head from 'next/head';
+import Link from 'next/link';
 
-export default function Home() {
+const Home = () => {
+  const hello = 'hello';
+
   return (
     <div className="container">
       <Head>
@@ -10,7 +13,7 @@ export default function Home() {
 
       <main>
         <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Read{' '}<Link href="posts/first-post"><a>this page!</a></Link>
         </h1>
 
         <p className="description">
@@ -207,3 +210,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default Home;
